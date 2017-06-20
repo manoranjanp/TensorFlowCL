@@ -5,7 +5,7 @@ Before you start, the instructions assume that you are running a Ubuntu Machine 
 
 ## For CPU:
 
-[Step-1] Installing TensorFlow-CPU:
+**[Step-1] Installing TensorFlow-CPU:**
 
 1. To install the CPU version of TensorFlow on your Ubuntu or Mac OS machine you simply follow the instructions listed on the TensorFlow Website.
 2. When following Instruction 1, installing ‘Virtualenv’ is the easiest. If you still face issues you can always follow the ‘Docker Installation’ method for Mac OS or Ubuntu.
@@ -32,7 +32,7 @@ alias lbm-nouveau off
 
 4. Next you need to get into ‘Text Mode [Runlevel 3]’, for temporary use you can switch your desktop to tty1 using a key combination of Ctrl + Alt + F1 to enter and Ctrl +Alt + F7 to exit.
 
-Once you are in text mode enter: ```sudo sh cuda_<version-no>_linux.run``` and then follow the on-screen instructions by selecting the following options:
+Once you are in text mode navigate where you have downloaded the CUDA installation file enter: ```sudo sh cuda_<version-no>_linux.run``` and then follow the on-screen instructions by selecting the following options:
  ```
 Do you accept the previously read EULA? (accept/decline/quit): accept
 
@@ -73,28 +73,24 @@ If it returns an error saying nvcc is not installed than you need to check if th
 
 
 
-1. This steps will guide you in installing NVIDIA CUDA® Deep Neural Network library (cuDNN). For downloading the same you will need to create a free account with NVIDIA here and then proceed here to download cuDNN.
+1. This steps will guide you in installing NVIDIA CUDA® Deep Neural Network library (cuDNN). For downloading the same you will need to create a free account with NVIDIA [here](https://developer.nvidia.com/developer-program) and then proceed [here](https://developer.nvidia.com/rdp/cudnn-download) to download cuDNN.
 
-Select the option: ‘cuDNN v5.1 Library for Linux’ from the list of downloads list as we are installing on a Ubuntu Machine.
-Once you have downloaded it cd to the directory where the file is downloaded and run the following commands in the terminal.
+2. Select the option: ‘cuDNN v5.1 Library for Linux’ from the list of downloads list as we are installing on a Ubuntu Machine. Once you have downloaded it ```cd``` to the directory where the file is downloaded and run the following commands in the terminal.
 
+```
 tar -zxf cudnn-8.0-linux-x64-v5.1-ga.tgz
 cd cuda
 sudo cp lib64/* /usr/local/cuda/lib64/
 sudo cp include/* /usr/local/cuda/include/
+```
 
 And you are done! You have now installed cuDNN as well as CUDA.
-
 
 
 **[Step-3] Installing CUDA Profiling Tools Interface:**
 
 
-
-
 Open the terminal and enter: sudo apt-get install libcupti-dev
-
-
 
 
 **[Step-4] Installing TensorFlow-GPU:**
