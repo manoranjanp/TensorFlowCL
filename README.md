@@ -1,18 +1,18 @@
-#Installing TensorFlow for CPU | GPU Simplified
+# Installing TensorFlow for CPU | GPU Simplified
 
 Before you start, the instructions assume that you are running a Ubuntu Machine for doing the installation.
 
 
-#For CPU:
+## For CPU:
 
 [Step-1] Installing TensorFlow-CPU:
 
 1. To install the CPU version of TensorFlow on your Ubuntu or Mac OS machine you simply follow the instructions listed on the TensorFlow Website.
 2. When following Instruction 1, installing ‘Virtualenv’ is the easiest. If you still face issues you can always follow the ‘Docker Installation’ method for Mac OS or Ubuntu.
 
-#For GPU:
+## For GPU:
 
-[Step-1] Installing CUDA Toolkit:
+**[Step-1] Installing CUDA Toolkit:**
 
 1. Check if your GPU is CUDA Supported at https://developer.nvidia.com/cuda-gpus before proceeding further.
 Download CUDA Toolkit from there by following the on screen instructions and select the ‘runfile’(local) when you are about to download the same.
@@ -49,27 +49,27 @@ Install the CUDA 8.0 Samples? ((y)es/(n)o/(q)uit): y
 
 Enter CUDA Samples Location [ default is /root ]: [Any location you want]
  ```
-4. Now you need to set the correct path in ```.bashrc``` for CUDA, follow the below steps for the same. To open the ```.bashrc``` file:
+5. Now you need to set the correct path in ```.bashrc``` for CUDA, follow the below steps for the same. To open the ```.bashrc``` file:
 
 ```<Your Code Editor> ~/.bashrc```
 
 Append the following lines at the bottom of the file:
  ```
-# CUDA Toolkit
+### CUDA Toolkit
 export CUDA_HOME=/usr/local/cuda-8.0
 export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH
 export PATH=${CUDA_HOME}/bin:${PATH}
  ```
-5. In order to verify or check if CUDA toolkit is properly installed open the terminal and enter ```nvcc -V``` and it should give an output mentioning the CUDA version.
+6. In order to verify or check if CUDA toolkit is properly installed open the terminal and enter ```nvcc -V``` and it should give an output mentioning the CUDA version.
 
 If it returns an error saying nvcc is not installed than you need to check if the path you have set is correct as well if CUDA Toolkit is properly installed or not.
 
-6. Usually your ```.bashrc``` is automatically sourced when you login or you open a new terminal but as we have manually updated it right now the below small step would be very helpful.
+7. Usually your ```.bashrc``` is automatically sourced when you login or you open a new terminal but as we have manually updated it right now the below small step would be very helpful.
 ```source ~/.bashrc```
 
 
 
-[Step-2] Installing cuDNN:
+**[Step-2] Installing cuDNN:**
 
 
 
@@ -87,7 +87,7 @@ And you are done! You have now installed cuDNN as well as CUDA.
 
 
 
-[Step-3] Installing CUDA Profiling Tools Interface:
+**[Step-3] Installing CUDA Profiling Tools Interface:**
 
 
 
@@ -97,7 +97,7 @@ Open the terminal and enter: sudo apt-get install libcupti-dev
 
 
 
-[Step-4] Installing TensorFlow-GPU:
+**[Step-4] Installing TensorFlow-GPU:**
 
 
 
